@@ -63,9 +63,7 @@
   border: 1px solid currentColor;
 }
 /* 유튜브 영상 섹션 */
-.ediya-youtube {
-  background-color: yellow;
-}
+
 .ediya-youtube-wrapper {
   margin: 0;
 }
@@ -86,6 +84,89 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+/* 공지사항 섹션 */
+.ediya-notice {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.ediya-notice-headline,
+.ediya-notice__article {
+  padding: 15px;
+}
+.ediya-notice-headline {
+  width: 125px;
+  flex-shrink: 0;
+  background: var(--theme-primary) linear-gradient(137deg, var(--color-gradient-start) 5%, var(--color-gradient-end) 100%);
+  color: var(--theme-bright);
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.6rem;
+  /* background: linear-gradient(137deg, #263d83 5%, #102457 100%);
+  color: #fff;
+  padding: 10px;
+  position: relative;
+  margin: 0; */
+}
+.ediya-notice__article {
+  flex-grow: 1;
+}
+.ediya-notice__article-headline {
+  margin: 0 0 5px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--theme-primary);
+}
+.ediya-notice__article-date {
+  font-size: 1.2rem;
+  color: var(--theme-disable);
+}
+.ediya-notice__article-text {
+  font-size: 1.3rem;
+  margin: 10px 0 0;
+  line-height: 1.5;
+}
+
+.ediya-notice .button-container {
+  position: absolute;
+  left: 84px;
+  bottom: 10px;
+}
+.ediya-notice .button {
+  background-color: transparent;
+  padding: 0;
+}
+/* 이디야 뉴스 섹션 */
+.ediya-news {
+  background: var(--theme-primary);
+  color: var(--theme-bright);
+  padding: 15px;
+  position: relative;
+}
+.ediya-news-headline {
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.6rem;
+}
+.ediya-news-list {
+  margin: 15px 0 0;
+}
+.ediya-news-list li {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.ediya-news-subject {
+  width: 72.5%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.ediay-news .icon-more {
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 /* .ediya-recommend-beverage img {
   animation-name: bounce;
@@ -130,6 +211,7 @@
     width: 60%;
     transform: translateX(-60%);
   }
+
 }
 @media all and (min-width: 768px) {
   /* 데스크탑 추천 음료 */
@@ -203,4 +285,17 @@
     font-weight: 700;
     color: #24388d;
   } */
+  .ediya-section-container {
+    background: #f5f5f5;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 85px 0;
+  }
+  .ediya-youtube {
+    width: 365px;
+  }
+  .ediya-inform-container {
+    width: 400px;
+  }
 }
