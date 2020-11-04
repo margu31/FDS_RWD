@@ -56,8 +56,12 @@
 }
 /* 메뉴 보기 링크 */
 .go-menu {
-  position: relative;
-  display: inline-block; /* 가운데 정렬 유지하려면 inline-block */
+  /* position: relative; */
+  /* 이미지보다 위에 올라와서 클릭하는데 방해받지 않기 위해 relative 값 줌 */
+  /* display: inline-block; */
+  /* 가운데 정렬 유지하려면 inline-block */ 
+  /* 컨테이너 영역에 text-align: center; 있어서 inline-block 안해줘도 가운데 정렬은 가능 */
+  /* but, padding 값 줘야하니까 inline-block은 유지해야함. block으로 처리하면 원하는 레이아웃 안나옴 */
   padding: 8px 24px;
   color: var(--theme-primary);
   border: 1px solid currentColor;
@@ -103,14 +107,10 @@
   font-weight: 700;
   margin: 0;
   font-size: 1.6rem;
-  /* background: linear-gradient(137deg, #263d83 5%, #102457 100%);
-  color: #fff;
-  padding: 10px;
-  position: relative;
-  margin: 0; */
 }
 .ediya-notice__article {
   flex-grow: 1;
+  background: var(--theme-bright);
 }
 .ediya-notice__article-headline {
   margin: 0 0 5px;
@@ -156,14 +156,20 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  align-items: center;
 }
 .ediya-news-subject {
   width: 72.5%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-size: 1.4rem;
+  line-height: 1.5;
 }
-.ediay-news .icon-more {
+.ediya-news-date {
+  font-size: 1.2rem;
+}
+.ediya-news .icon-more {
   position: absolute;
   top: 15px;
   right: 15px;
