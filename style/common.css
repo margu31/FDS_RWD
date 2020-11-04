@@ -217,20 +217,21 @@ body {
  /* 데스크탑 푸터 */
   .app-footer-container {
     position: relative;
-
+    width: 100%;
   }
   .app-footer-container::befor {
     content: "";
     position: absolute;
     top: 52px;
     left: 0;
-    width: 100%;
+    width: 100vw;
     border-top: 1px solid currentColor;
   }
   .app-footer {
     width: 740px;
     margin: 0 auto;
   }
+  /* 데스크탑 위로가기 버튼 */
   .button-goToTop {
     bottom: 50px;
     right: 50px;
