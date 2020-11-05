@@ -179,17 +179,17 @@ body {
   .is--active .app-navigation {
     transform: none;
   }
-}
-/* 모바일 푸터 */
-.guide-list {
-  border-bottom: 1px solid currentColor;
-}
-.address, .copyright {
-  padding: 0 20px;
-}
-.button-goToTop {
-  bottom: 15px;
-  right: 15px;
+  /* 모바일 푸터 */
+  .guide-list {
+    border-bottom: 1px solid currentColor;
+  }
+  .address, .copyright {
+    padding: 0 20px;
+  }
+  .button-goToTop {
+    bottom: 15px;
+    right: 15px;
+  }
 }
 @media all and (min-width: 768px){
   /* 데스크탑 헤더 */
@@ -218,13 +218,14 @@ body {
   .app-footer-container {
     position: relative;
     width: 100%;
+    /* background-color: yellow; */
   }
-  .app-footer-container::befor {
+  .app-footer-container::before {
     content: "";
     position: absolute;
     top: 52px;
     left: 0;
-    width: 100vw;
+    width: 100%;
     border-top: 1px solid currentColor;
   }
   .app-footer {

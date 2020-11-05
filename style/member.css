@@ -100,7 +100,7 @@
   background: url(../images/icon-visible.svg) no-repeat 50% 50%;
 }
 .member-form .is--visible .button-password .ir {
-  background-image: url(../images/icon-invisible.svg) no-repeat 50% 50%;
+  background-image: url(../images/icon-invisible.svg);
 }
 .member-form .is--invalid .button-password {
   right: 20px;
@@ -146,7 +146,8 @@
   display: block;
   width: 100%;
   height: 48px;
-  line-height: 48px;
+  line-height: 48px; 
+  /* height와 line-height를 동일하게 주면 text가 (수직으로)가운데 정렬하는 효과를 가질수 있다. */
   padding: 0;
   font-size: 2rem;
   font-weight: 700;
@@ -180,6 +181,7 @@
   border: 1px solid var(--theme-bright3);
   color: var(--theme-bright2);
   background-color: transparent;
+
 }
 .button-stroke:hover,
 .button-stroke:focus {
@@ -188,22 +190,6 @@
 .button-stroke::after {
   background-image: url(../images/icon-arrow-white.svg);
 }
-
-/* .member-form .is--focus {
-  border: 2px solid darkblue;
-}
-
-.is--focus label, .is--valid label, .is--invalid label {
-  font-size: 1.2rem;
-  top: 0;
-  left: 0;
-}
-.is--focus label::after {
-
-}
-.is--valid, .is--invalid {
-  border-bottom: 2px solid gray;
-} */
 
 @media all and (min-width: 768px) {
   /* 데스크탑 멤버 섹션 */
