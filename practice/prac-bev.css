@@ -1,0 +1,105 @@
+/* 음료 목록 */
+.ediya-menu {
+  padding: 20px;
+  display: flex;
+  flex-flow: row wrap;
+}
+/* 음료 목록 아이템 */
+.ediya-menu__item {
+  position: relative;
+  background: rgb(247, 244, 244);
+  margin-top: 20px;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  width: 100%;
+}
+.ediya-menu__item:first-child {
+  margin-top: 0;
+}
+.ediya-menu__item a {
+  display: block;
+  text-align: center;
+}
+.ediya-menu__item figure {
+  margin: 0;
+}
+.ediya-menu__item img {
+  transform: scale(0.8);
+  transition: all 0.2s;
+}
+.ediya-menu__item [role="button"]:hover img {
+  transform: scale(1);
+}
+/* 음료 디테일 정보 */
+.ediya-menu__item--detail {
+  background-color : hsla(255, 255, 255, 0.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  font-size: 1.4rem;
+}
+
+.ediya-menu__item--name {
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 10px 0;
+  border-bottom: 2px solid;
+}
+.ediya-menu__item--name [lang="en"] {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 300;
+  padding-top: 5px;
+}
+.ediya-menu__item--multi-column {
+  background-color: #eee;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  column-count: 2;
+  column-rule: 1px solid;
+  padding: 10px 0;
+}
+.ediya-menu__item--multi-column dl {
+  font-size: 0;
+  padding-bottom: 15px;
+}
+.ediya-menu__item--multi-column dt,
+.ediya-menu__item--multi-column dd {
+  display: inline-block;
+  width: 50%;
+  font-size: 1.3rem;
+  margin-top: 15px;
+  text-indent: 20px;
+}
+
+.ediya-menu__item--multi-column dd {
+  margin-left: 0;
+}
+.is-close-panel {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+}
+
+@media all and (min-width: 768px) {
+  .ediya-menu {
+    width: 740px;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-left: 0;
+    /* justify-content: center; */
+    justify-content: space-between;
+  }
+  .ediya-menu__item {
+    width: 360px;
+  }
+  .ediya-menu__item:nth-child(2) {
+    margin-top: 0;
+  }
+}
